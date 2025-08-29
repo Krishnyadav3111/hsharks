@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title or "Hsharks" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('home') }}">Hsharks</a> |
+      <a href="{{ url_for('about') }}">About</a> |
+      <a href="{{ url_for('sports') }}">Sports</a> |
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>© 2025 Hsharks</footer>
+  </body>
+</html>
